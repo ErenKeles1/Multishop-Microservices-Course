@@ -36,7 +36,7 @@ namespace Multishop.Catalog.Services.CategoryServices
             return _mapper.Map<List<ResultCategoryDto>>(values);
         }
 
-        public async Task<GetByIdCategoryDto> GetByIdCategroyAsync(string id)
+        public async Task<GetByIdCategoryDto> GetByIdCategoryAsync(string id)
         {
             var values = await _categoryCollection.Find<Category>(x=> x.CategoryId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdCategoryDto>(values);
