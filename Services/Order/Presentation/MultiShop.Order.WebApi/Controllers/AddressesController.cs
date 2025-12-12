@@ -36,7 +36,7 @@ namespace MultiShop.Order.WebApi.Controllers
             return Ok(values);
         }
         [HttpPost]
-        public async Task<IActionResult>CreateAddress(CreateAdressCommand command)
+        public async Task<IActionResult>CreateAddress(CreateAddressCommand command)
         {
             await _createAddressCommandHandler.Handle(command);
             return Ok("Adres bilgisi başarıyla eklendi");
